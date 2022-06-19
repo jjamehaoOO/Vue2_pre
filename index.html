@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+
+    v-pre指令:
+        1.跳過其所在節點的編譯過程
+        2.可利用他跳過: 沒有使用指令語法 沒有使用插值語法的節點 會加快編譯
+
+<div id="root">
+    <h2 v-pre>初始化的是</h2>
+    <h2>當前的n值是:{{n}}</h2>
+    <button @click="n++">點我n+1</button>
+</div>
+</body>
+<script> 
+    let vm = new Vue({
+        el:'#root',
+        data:{
+            n:1
+            
+        },
+
+    })
+</script>
+</html>
+</body>
+</html>
